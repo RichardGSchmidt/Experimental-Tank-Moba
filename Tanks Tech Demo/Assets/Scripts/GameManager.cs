@@ -6,13 +6,24 @@ public class GameManager : Photon.MonoBehaviour {
 
     public GameObject[] redSpawn;
     public GameObject[] blueSpawn;
-
+    public GameObject target;
     public int state = 0;
+
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Target"); 
+    }
 
     void Connect()
     {
         PhotonNetwork.ConnectToBestCloudServer("V-A1");
         state = 1;
+        
+    }
+
+    void Update()
+    {
+        
     }
 
 
